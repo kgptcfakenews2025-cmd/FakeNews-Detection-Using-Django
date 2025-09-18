@@ -20,18 +20,20 @@
 
       <th>Actions</th>
     </tr>
+    {% for i in val %}
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>{{ i.Name }}</td>
+      <td>{{ i.Age }}</td>
+      <td>{{ i.Gender }}</td>
+      <td>{{ i.Address }}</td>
+      <td>{{ i.Phone }}</td>
+      <td>{{ i.Email }}</td>
       <td>
-        <button>Edit</button>
-        <button>Delete</button>
+        <a href="AcceptUser/{{ i.loginid.id }}">Accept</a>
+        <a href="RejectUser/{{ i.loginid.id }}">Reject</a>
       </td>
     </tr>
+    {% endfor %}
     
 
   </table>

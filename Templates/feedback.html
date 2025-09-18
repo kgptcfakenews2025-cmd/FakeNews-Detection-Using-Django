@@ -15,12 +15,13 @@
       <th>feedback</th>
       <th>date</th>
     </tr>
+   {% for i in val %}
     <tr>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td>{{ i.userid.Name }}</td>
+      <td>{{ i.Feedback }}</td>
+      <td>{{ i.Date }}</td>
     </tr>
-    
+     {% endfor %}
 
   </table>
 
